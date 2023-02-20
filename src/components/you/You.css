@@ -1,0 +1,29 @@
+.in {
+    width: 100%;
+    /* margin: 6rem; */
+    text-align: center;
+    /* background-color: #D9D9D9; */
+   text-transform: capitalize;
+   background-color: #1E1402;
+   padding-top: 130px;
+   color: white;
+   padding-bottom: 130px;
+}
+
+.in h1 {
+    padding-top: 35px;
+    border-top: 2px solid gold;
+    display: inline;
+}
+
+.in p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-top: 20px;
+}
+
+.in h1 {
+    font-size: 3.5rem;
+}

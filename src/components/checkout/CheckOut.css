@@ -1,0 +1,113 @@
+.formContainer {
+    margin: 0 auto;
+    
+    background-color: #40A989;
+    max-width: 500px;
+    height: 450px;
+    width: 50%;
+    border-radius: 13px;
+    margin-top: 13%;
+    margin-bottom: 9%;
+}
+
+/* .Checkout {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: 2%;
+    left: 40%;
+    margin-top: 100px;
+
+} */
+
+.mpesaForm input {
+    margin-left: 100px;
+    margin-top: 27px;
+    display: block;
+    height: 30px;
+    border-radius: 9px;
+    font-size: 15px;
+    width: 300px;
+}
+
+.mpesaForm button{
+    display: block;
+    margin-left: 185px;
+    margin-top: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(228, 227, 227);
+    width: 140px;
+    padding-top: 10px;
+    font-weight: 700;
+    padding-bottom: 30px;
+   
+}
+
+.mpesaForm button:hover {
+    color: black;
+}
+
+.mpesaForm label{
+    margin-left: 160px ;
+    color: black;
+    font-weight: 800;
+}
+
+.bankForm label{
+   
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 100px;
+    width: 300px;
+}
+
+.bankForm input{
+    width: 300px;
+    margin-left:98px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.bankForm button{
+    display:block;
+    width: 140px;
+    margin-left: 180px;
+    height:30px;
+    border-radius: 9px;
+    background-color: rgb(228, 227, 227)
+}
+.bankForm select{
+    margin-left: 98px;
+    width: 300px;
+}
+
+.radioButton input {
+    margin-left: 170px;
+    margin-top: 20px;
+    
+}
+
+.radioButton h1{
+    margin-left: 180px;
+    margin-top: -27px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.radioForm h2 {
+    margin-left: 74px;
+   padding-top: 37px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mpesaForm h4 {
+    padding-top: 45px;
+    margin-bottom: -39px;
+    margin-left: 130px;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+

@@ -1,0 +1,157 @@
+.addProperty{
+    position: relative;
+    /* top: 1%; */
+    left: 40%;
+    width: 400px;
+    height: 850px;
+    background-color: #41A989;
+    margin-top: 130px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    
+  }
+
+  
+  form input{
+    display: block;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 300px;
+    height: 30px;
+    border-style:none;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    padding-left: 15px;
+    border-radius: 10px;
+  }
+  form textarea {
+    display: block;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 300px;
+    border-radius: 10px;
+    height: 50px;
+  }
+  form button {
+   background-color: #EFEFEF;
+   margin-left: 150px;
+   margin-top: 20px;
+   padding-bottom: 50px;
+   width: 100px;
+   height: 40px;
+   align-items: center;
+   border-radius: 10px;
+   border-style: none;
+   color: black;
+   font-weight: 800;
+  }
+  form label{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size:large;
+    font-weight: 600;
+  }
+  .propType select{
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 9px;
+    padding-left: 7px;
+    margin-left: 15px;
+    
+  }
+  .propType label{
+    margin-left: 50px;
+  }
+  .propType{
+    padding: 10px;
+  }
+  form label .desc{
+    padding-top: 10px;
+  }
+  h3{
+    align-content: center;
+  }
+  #sellTitle{
+    padding-top: 10px;
+    margin-left:140px ;
+    font-size: large;
+    font-size: 25px;
+    font-weight: 800;
+  }
+  body{
+    background-color: white;
+  }
+  .dropdown{
+    padding: 12px;
+    max-width: 320px;
+    position: relative;
+    /* background-color: white; */
+    border-radius: 5px;
+  }
+  .custom-dropdown-selection{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 16px;
+    cursor: pointer;
+    position: relative;
+  }
+  .custom-dropdown-selection::after{
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    /* border-right: 1px solid #0003;
+    border-bottom: 1px solid #0003; */
+    transform: rotate(45deg);
+    position:absolute;
+    right: 15px;
+    top:12px;
+  }
+   .custom-dropdown-selection.visible::after{
+    top:18px;
+    transform: rotate(-135deg);
+  }
+  .dropdown .items-holder{
+    border-radius: 5px;
+    background-color: white;
+    position:absolute;
+    top: 40px;
+    width: 320px;
+  }
+  .dropdown .items-holder .dropdown-item{
+    padding: 10px, 16px;
+    cursor: pointer;
+  }
+  .dropdown .items-holder .dropdown-item:hover{
+    background-color:bisque
+  }
+  .Checkout{
+    background-color:darkgray;
+    width: 500px;
+    height: 700px;
+    position: relative;
+    top: 5%;
+    left: 40%;
+    margin-top: 100px;
+  }
+  .container {
+    max-width: 1230px;
+    margin:auto;
+  }
+  .btn {
+    color: white;
+    padding: 12px 24px;
+    background-image: linear-gradient(45deg, #40A989 0%, #40A989 100%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s;
+  }
+  .btn:active {
+    transform: translate(4px);
+    box-shadow: 0px 0px 1px rgba(0,0,0,0,.2);
+    border-bottom: none;
+  }

@@ -1,0 +1,104 @@
+.hero {
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+    margin-top: 90px;
+}
+
+.hero:before {
+    content: '';
+    background: url('../../assets/landing.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 80vh;
+}
+
+.hero .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.hero h1 {
+    font-size: 8rem;
+    text-transform: capitalize;
+}
+
+.hero p {
+    font-size: 4.2rem;
+}
+
+.hero .btn1 {
+    color: white;
+    padding: 12px;
+    margin:23rem;
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-right: auto;
+    background-image: linear-gradient(45deg, #40A989 0%, #40A989 100%);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .hero .btn1:active {
+    transform: translate(4px);
+    box-shadow: 0px 0px 1px rgba(0,0,0,0,.2);
+    border-bottom: none;
+  }
+
+  @media screen and (max-width: 940px){
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 4.7rem;
+    }
+
+    .hero p {
+        font-size: 2.7rem;
+    }
+
+    .hero .btn1 {
+        width: 40%;
+        margin-left: auto;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
