@@ -3,6 +3,7 @@ import './Testimonial.css'
 import data from "../../data"
 
 
+
 const Testimonial = () => {
     const [people] = useState(data);
     const [index, setIndex] = useState(0);
@@ -31,6 +32,7 @@ const Testimonial = () => {
 
    
     return (
+        <div className="testimony">
         <section className="section">
            <div className="title">
 
@@ -71,6 +73,8 @@ const Testimonial = () => {
            </button>
            </div>
         </section>
+
+        </div>
     )
 }
 
