@@ -8,10 +8,16 @@ h4 {
   margin-bottom: 0.75rem;
   font-size: 1.4rem;
 }
+.testimony{
+  background-color:#1E1402;
+  border-radius: 10px;
+}
 .section {
   width: 90vw;
   margin: 5rem auto;
   max-width: 1170px;
+  /* background-color: greenyellow; */
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 992px) {
