@@ -13,6 +13,11 @@ const Properties = () => {
    const [currentPage, setCurrentPage] = useState(1);
    const [propertiesPerPage, setPropertiesPerPage] = useState(8);
 
+   //Filtering states
+   const [location, setLocation] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+ 
+
 
 
 
@@ -35,66 +40,99 @@ const Properties = () => {
            });
    }, []);
 
-   const indexOfLastProperty = currentPage * propertiesPerPage;
+const filteredData = filter.length === 0 ? data : filter;
+const indexOfLastProperty = currentPage * propertiesPerPage;
 const indexOfFirstProperty = indexOfLastProperty - propertiesPerPage;
-const currentProperties = filter.slice(indexOfFirstProperty, indexOfLastProperty);
+const currentProperties = filteredData.slice(
+  indexOfFirstProperty,
+  indexOfLastProperty
+);
+
 
  
    const Loading = () => {
        return <>Loading....</>;
    };
 
- 
-   const filterProperty = (cat) => {
-       const updatedList = data.filter((x) => x.category === cat);
-       setFilter(updatedList);
-   };
+;
+
+
+//Filtering function
+
+    const filterProperty = () => {
+  let updatedList = data;
+
+  if (location !== "") {
+    updatedList = updatedList.filter((x) => x.location === location);
+  }
+
+  if (propertyType !== "") {
+    updatedList = updatedList.filter(
+      (x) => x.property_type === propertyType
+    );
+  }
+
+  setFilter(updatedList);
+};
+
+
+
  
    const ShowProperties = () => {
        return (
            <>
                <div className="buttons d-flex justify-content-center mn-5 pb-5">
-                   <buttons
-                       className="btn btn-outline-dark me-3"
-                       onClick={() => setFilter(data)}
-                   >
-                       All
-                   </buttons>
- 
-                   <buttons
-                       className="btn btn-outline-dark me-3"
-                       onClick={() => filterProperty("location")}
-                   >
-                   <div className="form-group mt-3">
-                    <label for="Location">Choose a Location:</label>
-                       <select name="location">
-                       <option value="Nairobi">Nairobi</option>
-                       <option value="Kikuyu">Kikuyu</option>
-                       <option value="Mombasa">Mombasa</option>
-                       <option value="Kisumu">Kisumu</option>
-                       </select>
-                   </div>
-                   </buttons>
- 
-                  
-                   <buttons
-                       className="btn btn-outline-dark me-3"
-                       onClick={() => filterProperty("property_type")}
-                   >
-                        <div className="form-group mt-3">
-                           <label for="Property Type">Choose property type:</label>
-                       <select name="property_type">
-                       <option value="villas">Villas</option>
-                       <option value="Apartment">Apartment</option>
-                       <option value="Townhouses">Townhouses</option>
-                       <option value="Penthouses">Penthouses</option>
-                       <option value="Residential plot">Residential Plot</option>
-                       <option value="Residential floor">Residential Floor</option>
-                       <option value="Residential building">Residential Building</option>
-                       </select>
-                   </div>
-                   </buttons>
-               </div>
+  <button
+    className="btn btn-outline-dark me-3"
+    onClick={() => {
+      setLocation("");
+      setPropertyType("");
+      setFilter(data);
+    }}
+  >
+    All
+  </button>
+
+  <div className="form-group mt-3 me-3">
+    <label htmlFor="location">Choose a Location:</label>
+    <select
+      name="location"
+      value={location}
+      onChange={(e) => setLocation(e.target.value)}
+    >
+      <option value="">All</option>
+      <option value="Nairobi">Nairobi</option>
+      <option value="Kikuyu">Kikuyu</option>
+      <option value="Mombasa">Mombasa</option>
+      <option value="Kisumu">Kisumu</option>
+    </select>
+  </div>
+
+  <div className="form-group mt-3">
+    <label htmlFor="property_type">Choose Property Type:</label>
+    <select
+      name="property_type"
+      value={propertyType}
+      onChange={(e) => setPropertyType(e.target.value)}
+    >
+      <option value="">All</option>
+      <option value="villas">Villas</option>
+      <option value="Apartment">Apartment</option>
+      <option value="Townhouses">Townhouses</option>
+      <option value="Penthouses">Penthouses</option>
+      <option value="Residential plot">Residential Plot</option>
+      <option value="Residential floor">Residential Floor</option>
+      <option value="Residential building">Residential Building</option>
+    </select>
+  </div>
+
+
+
+  <button className="btn btn-outline-dark" onClick={filterProperty}>
+    Filter
+  </button>
+</div>
+
                {currentProperties.map((property) => {
                    return (
                        <>
