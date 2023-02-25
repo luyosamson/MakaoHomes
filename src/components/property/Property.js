@@ -2,15 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Pagination from "../pagination/Pagination";
 
  
 const Properties = () => {
    const [data, setData] = useState([]);
    const [filter, setFilter] = useState(data);
    const [loading, setLoading] = useState(false);
-//    const [properties, setProperties] = useState([])
- 
-//    let componentMounted = true;
+
+   const [currentPage, setCurrentPage] = useState(1);
+   const [propertiesPerPage, setPropertiesPerPage] = useState(8);
+
+
+
+
 
    const navigate = useNavigate ()
 
@@ -29,6 +34,11 @@ const Properties = () => {
                setLoading(false);
            });
    }, []);
+
+   const indexOfLastProperty = currentPage * propertiesPerPage;
+const indexOfFirstProperty = indexOfLastProperty - propertiesPerPage;
+const currentProperties = filter.slice(indexOfFirstProperty, indexOfLastProperty);
+
  
    const Loading = () => {
        return <>Loading....</>;
@@ -85,7 +95,7 @@ const Properties = () => {
                    </div>
                    </buttons>
                </div>
-               {filter.map((property) => {
+               {currentProperties.map((property) => {
                    return (
                        <>
                            <div className="col-md-3 mb-4">
@@ -125,7 +135,16 @@ const Properties = () => {
                </div>
                <div className="row justify-content-center">
                    {loading ? <Loading /> : <ShowProperties />}
+                   
                </div>
+                  <Pagination 
+        totalPosts={data.length}
+        postPerPage={propertiesPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        setPostperpage={setPropertiesPerPage}
+        
+        />
            </div>
        </div>
    );
