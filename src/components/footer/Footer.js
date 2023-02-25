@@ -3,7 +3,7 @@ import React from "react"
 import { footer } from "../../data"
 import "./Footer.css"
 import {BsFillHouseFill} from 'react-icons/bs'
-import { Container } from "react-bootstrap"
+// import { Container } from "react-bootstrap"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook,faInstagram, faTwitter, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className='send flex'>
           
             <div className='text'>
-              <h1>have any questions ?</h1>
+              <h3>Join Us On</h3>
 
               <div className="singleCol social-media-icons-white d-flex justify-content-evenly">
                 <a href="https://facebook.com/home.php">
