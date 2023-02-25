@@ -7,13 +7,13 @@
 }
 
 .pagination button {
-    width: 20px;
+    width: 25px;
     border-radius: 2.5px;
 }
 
 .pagination button.active {
     font-weight: 900;
     border-color: #101010;
-    background: #ffe400;
+    background: green;
     color: #101010;
 } 
